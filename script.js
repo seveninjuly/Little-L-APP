@@ -55,12 +55,23 @@ function displayGifResults(responseJson) {
     console.log(responseJson);
     $('.hidden').show();
     for (let i = 0; i < responseJson.data.length; i++) {
-        $('.results').append(
-            `<ul>
-            <li><img src="${responseJson.data[i].images.fixed_height_downsampled.url}" alt="preview">
+        if (window.innerWidth < 500) {
+            $('.results').append(
+                `<ul>
+            <li><img src="${responseJson.data[i].images.fixed_width_downsampled.url}" alt="preview">
       </li>
       </ul>`
-        );
+            );
+        }
+        else {
+            $('.results').append(
+                `<ul>
+                <li><img src="${responseJson.data[i].images.fixed_height_downsampled.url}" alt="preview">
+          </li>
+          </ul>`
+            );
+        }
+
     }
     console.log('Displaying gifs works!');
 }
