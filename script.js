@@ -57,7 +57,7 @@ function displayGifResults(responseJson) {
     for (let i = 0; i < responseJson.data.length; i++) {
         $('.results').append(
             `<ul>
-            <li><img src="${responseJson.data[i].images.fixed_width_downsampled.url}" alt="preview">
+            <li><img src="${responseJson.data[i].images.fixed_height_downsampled.url}" alt="preview">
       </li>
       </ul>`
         );
