@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Cheer up a little bit.">
+    <title>Little L</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header class="hidden">
+        <h1><a id="logo" href="index.html">Little L</a></h1>
+        <nav class="navbar">
+            <a href="#" class="for-jokes">
+                <p>Little Extra</p>
+            </a>
+            <div class="search-bar" id="toggle">
+                <div class="icon"></div>
+                <div class="full-search">
+                    <form class="start-search" role="form" action="#" method="post">
+                        <input type="text" placeholder="What GIF do you want?" name="second" class="input"
+                            id="full-input">
+                        <i class="fas fa-search" id="second-search"></i>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main">
+        <section id="start-container">
+            <h1 class="baffle">What can I get for you?</h1>
+            <form class="start-search" role="form" action="#" method="post">
+                <label for="search-input"></label>
+                <input type="text" name="keyword" placeholder="art, cat, me etc" class="input" id="search-input"
+                    required>
+                <button type="submit" id="start-search-btn">search</button>
+            </form>
+        </section>
+
+        <section class="hidden" id="result-container">
+            <div class="results"></div>
+        </section>
+
+        <button class="hidden" id="more-results" type="button">Want more?</button>
+        <button class="hidden" id="to-top-btn" type="button"><i class="fas fa-chevron-circle-up"></i></button>
+        <footer class="hidden">Powered By GIPHY</footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+    <script src="https://kit.fontawesome.com/9815c27ad6.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
