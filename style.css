@@ -7,7 +7,7 @@
 }
 
 body {
-	background-color: white;	
+	background-color: rgb(252, 249, 249);	
     font-family: 'Cairo', sans-serif;
 }
 
@@ -158,7 +158,7 @@ main {
 
 #start-container {
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
     flex-direction: column;
     justify-content: center;
@@ -221,7 +221,7 @@ main {
 
 #about-container {
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	background-color: white;
 	display: flex;
 	flex-direction: column;
@@ -230,7 +230,7 @@ main {
 	text-align: center;
 	font-size: 23px;
 	font-family: 'Mansalva', cursive;
-	color: rgb(241, 229, 229);
+	color: rgb(252, 249, 249);
 	background-color: rgb(74, 46, 95);
 	padding-left: 3vw;
 	padding-right: 3vw;
