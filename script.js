@@ -12,6 +12,7 @@ function formatQueryParams(params) {
     return queryItems.join('&');
 }
 
+//send request to access GIPHY api
 function getGifs(query) {
     const params = {
         api_key: apiKey,
@@ -51,6 +52,7 @@ function getGifs(query) {
         });
 }
 
+//display user's search result of gifs
 function displayGifResults(responseJson) {
     console.log(responseJson);
     $('.hidden').show();
@@ -58,17 +60,17 @@ function displayGifResults(responseJson) {
         if (window.innerWidth < 500) {
             $('.results').append(
                 `<ul>
-            <li><img src="${responseJson.data[i].images.fixed_width_downsampled.url}" alt="preview">
-      </li>
-      </ul>`
+                  <li><img src="${responseJson.data[i].images.fixed_width_downsampled.url}" alt="preview">
+                  </li>
+                 </ul>`
             );
         }
         else {
             $('.results').append(
                 `<ul>
-                <li><img src="${responseJson.data[i].images.fixed_height_downsampled.url}" alt="preview">
-          </li>
-          </ul>`
+                  <li><img src="${responseJson.data[i].images.fixed_height_downsampled.url}" alt="preview">
+                  </li>
+                 </ul>`
             );
         }
 
@@ -76,6 +78,7 @@ function displayGifResults(responseJson) {
     console.log('Displaying gifs works!');
 }
 
+//get user input to search for results
 function watchGifForm() {
     $('#start-search-btn,#second-search').on('click', function () {
         event.preventDefault();
@@ -89,12 +92,14 @@ function watchGifForm() {
         else {
             $('.results').empty();
             $('#start-container').hide();
+            $('#about-container').hide();
             getGifs(userInput);
         }
         console.log(userInput);
     });
 }
 
+//send request to get jokes
 function getJokes() {
     fetch(`https://official-joke-api.appspot.com/jokes/random`)
         .then(response => response.json())
@@ -102,6 +107,7 @@ function getJokes() {
         .catch(error => alert('Something went wrong, please try later.'));
 }
 
+//display joke randomly
 function displayJokes(responseJson) {
     console.log(responseJson);
     $('.results').addClass('joke');
@@ -113,17 +119,18 @@ function displayJokes(responseJson) {
         $('#more-results').text('Want more?');
         $('.results').append(
             `<ul>
-             <li>
+              <li>
                 <p class="beginning">${responseJson.setup}</p>
                 <p>${responseJson.punchline}</p>
-            </li>
-        </ul>`
+              </li>
+            </ul>`
         );
     }
 
     console.log('Displaying jokes works!');
 }
 
+//listen to click event when user want to see jokes
 function watchJokeForm() {
     $('.for-jokes').on('click', function () {
         event.preventDefault();
@@ -133,6 +140,7 @@ function watchJokeForm() {
     })
 }
 
+//use the same button to get both image and text results
 function handleBtnClick() {
     $('#more-results').on('click', function () {
         $('.results').empty();
@@ -145,6 +153,7 @@ function handleBtnClick() {
     })
 }
 
+//show and hide the full screen search bar when clicking the search icon on the main page
 function fullScreenSearch() {
     $('.icon').on('click', function () {
         $('.search-bar').toggleClass('active');
@@ -159,6 +168,7 @@ function fullScreenSearch() {
     })
 }
 
+//animation of the text on the start screen
 function baffleText() {
     const text = baffle('.baffle');
     text.set({
@@ -169,6 +179,7 @@ function baffleText() {
     text.reveal(4000);
 }
 
+//back to top button function
 function backToTop() {
     const toTopBtn = document.querySelector('#to-top-btn');
     toTopBtn.addEventListener('click', function () {
