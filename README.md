@@ -1,4 +1,4 @@
-### Laugh a little more, cheer up a little more, happy a little more! Check out my app Little L at:https://seveninjuly.github.io/Little-L-APP/.
+### Laugh a little more, cheer up a little more, happy a little more! Check out my app Little L at: https://seveninjuly.github.io/Little-L-APP/.
 
 This app is a gif search tool with extra random jokes,  when users want to cheer up a little bit, they can open this website and have some fun.
 - - - -
