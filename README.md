@@ -19,9 +19,9 @@ Display jokes:
 - - - -
 ### Features
 * On the start screen, users can start a search for different categories of gifs, such as animals, celebrities and so on.
-* Users can use the /“want more?”/ button to get new results.
-* Click the /search icon/ on the top right corner to start a new search.
-* If users want to check out the jokes, the /“Little Extra”/ on the top is there for them to get a random one. 
-* Users can always use the /“want more?”/ button to get another joke.
+* Users can use the *“want more?”* button to get new results.
+* Click the *search icon* on the top right corner to start a new search.
+* If users want to check out the jokes, the *“Little Extra”* on the top is there for them to get a random one. 
+* Users can always use the *“want more?”* button to get another joke.
 - - - -
 This app is built with **HTML, CSS and JavaScript**.
