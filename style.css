@@ -219,6 +219,32 @@ main {
     cursor: pointer;
 }	
 
+#about-container {
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 23px;
+	font-family: 'Mansalva', cursive;
+	color: rgb(241, 229, 229);
+	background-color: rgb(74, 46, 95);
+	padding-left: 3vw;
+	padding-right: 3vw;
+}
+
+#about-container h2 {
+	margin-top: -60px;
+}
+
+.about-top-line {
+	font-size: 18px;
+	margin-top: 30px;
+}
+
 #result-container {
 	display: flex;
 	flex-direction: column;
@@ -267,7 +293,7 @@ main {
 	border: none;
 	border-radius: 5px;
 	margin-top: 60px;
-	margin-bottom: 30px;
+	margin-bottom: 100px;
 	align-self: center;
 	cursor: pointer;
 }
@@ -296,8 +322,8 @@ footer {
 	text-align: center;
 	color: black;
 	font-size: 12px;
-	margin-top: 100px;
 	bottom: 0;
+	margin-top: 1px;
 }
 
 @media screen and (max-width: 430px) {
@@ -331,6 +357,25 @@ footer {
 
 	main {
 		width: 100%;
+	}
+
+	#about-container {
+		font-size: 18px;
+		font-family: 'Mansalva', cursive;
+		color: rgb(241, 229, 229);
+		background-color: rgb(86, 63, 94);
+		padding-left: 5vw;
+		padding-right: 5vw;
+		line-height: 2;
+	}
+	
+	#about-container h2 {
+		margin-top: -50px;
+	}
+	
+	.about-top-line {
+		font-size: 15px;
+		margin-top: 30px;
 	}
 
 	#result-container {
